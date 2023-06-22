@@ -1,15 +1,16 @@
 Pod::Spec.new do |s|
   s.name                      = 'GBDeviceInfo'
-  s.version                   = '7.2.0'
+  s.version                   = '7.2.1'
   s.summary                   = 'Detects the hardware, software and display of the current iOS or Mac OS X device at runtime.'
   s.author                    = 'Luka Mirosevic'      
   s.homepage                  = 'https://github.com/lmirosevic/GBDeviceInfo'
   s.license                   = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.source                    = { :git => 'https://github.com/lmirosevic/GBDeviceInfo.git', :tag => s.version.to_s }
   s.requires_arc              = true
-  s.ios.deployment_target     = '6.0'
+  s.ios.deployment_target     = '12.0'
   s.osx.deployment_target     = '10.10'
   s.default_subspec           = 'Core'
+  s.platform		      = :ios, '12.0'
 
   s.subspec 'Core' do |ss|
     ss.ios.source_files          = 'GBDeviceInfo/*_iOS.{h,m}', 'GBDeviceInfo/*_Common.{h,m}', 'GBDeviceInfo/GBDeviceInfo.h', 'GBDeviceInfo/GBDeviceInfoInterface.h', 'GBDeviceInfo/GBDeviceInfo_Subclass.h'
